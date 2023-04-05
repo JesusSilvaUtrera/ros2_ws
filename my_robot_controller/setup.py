@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'test_node = my_robot_controller.first_node:main',
+            'closed_loop = my_robot_controller.closed_loop:main',
         ],
     },
 )
