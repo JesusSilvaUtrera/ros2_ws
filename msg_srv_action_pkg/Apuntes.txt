@@ -1,0 +1,29 @@
+#Se necesita rosidl_default_generators para transformar los tipos que hemos creado y poder usarlos en nodos de python o C++
+#Se pueden asignar valores por defecto a los campos, de forma que si ese campo no se suministra no daria fallo o quedaria vacio
+
+#Mensajes
+
+#Se va poniendo en cada linea un campo con su tipo de dato. Ej:
+string nombre
+int64 edad
+geometry_msgs/Point center
+
+#Servicios
+
+#Hay que distinguir entre request y response
+int64 a
+int64 b
+---
+int64 sum
+
+#Acciones
+
+#Tenemos que distinguir la request del objetivo, la response del objetivo y el feedback
+#The desired heading in radians
+float32 theta
+---
+#The angular displacement in radians to the starting position
+float32 delta
+---
+#The remaining rotation in radians
+float32 remaining

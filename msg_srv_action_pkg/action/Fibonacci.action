@@ -1,0 +1,8 @@
+#La meta que proporcionamos es hasta que orden queremos
+int32 order
+---
+#El resultado deberia ser toda la secuencia, por eso un array
+int32[] sequence
+---
+#El feedback proprocionado sera como va la secuencia actualmente
+int32[] partial_sequence

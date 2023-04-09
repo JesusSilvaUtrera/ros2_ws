@@ -14,6 +14,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(example_interfaces REQUIRED)
 
 add_executable(nodo_prueba src/nodo_prueba.cpp)
 target_include_directories(nodo_prueba PUBLIC
@@ -32,10 +33,18 @@ ament_target_dependencies(talker_demo rclcpp std_msgs)
 add_executable(listener_demo src/subscriber_example.cpp)
 ament_target_dependencies(listener_demo rclcpp std_msgs)
 
+add_executable(server_demo src/servicio_example.cpp)
+ament_target_dependencies(server_demo rclcpp example_interfaces)
+
+add_executable(client_demo src/client_example.cpp)
+ament_target_dependencies(client_demo rclcpp example_interfaces)
+
 install(TARGETS 
   nodo_prueba
   talker_demo
   listener_demo
+  server_demo
+  client_demo
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
