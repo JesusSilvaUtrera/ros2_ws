@@ -22,6 +22,8 @@ setup(
         'console_scripts': [
             'test_node = my_robot_controller.first_node:main',
             'closed_loop = my_robot_controller.closed_loop:main',
+            'action_server = my_robot_controller.fibonacci_action_server:main',
+            'action_client = my_robot_controller.fibonacci_action_client:main',
         ],
     },
 )

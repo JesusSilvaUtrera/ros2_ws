@@ -1,0 +1,12 @@
+<!-- Esto es lo que especifica la creacion de plugins de un paquete de plugins (polygon_plugins) al paquete base (polygon_base)-->
+<!-- Con esto junto a las lineas de export que se han puesto en el archivo .cpp donde se han creado las clases para los plugins ROS ya sabe donde buscar 
+el paquete con los plugins y a que debe asignar cada cosa -->
+
+<library path="polygon_plugins">
+  <class type="polygon_plugins::Square" base_class_type="polygon_base::RegularPolygon">
+    <description>This is a square plugin.</description>
+  </class>
+  <class type="polygon_plugins::Triangle" base_class_type="polygon_base::RegularPolygon">
+    <description>This is a triangle plugin.</description>
+  </class>
+</library>
